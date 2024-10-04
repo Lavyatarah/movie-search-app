@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import MovieDetails from './pages/MovieDetails'; // Change here
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css'; // Custom styles CSS
 
 const App = () => {
   return (

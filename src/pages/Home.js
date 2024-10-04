@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import '../styles.css'; // Adjust the path as needed
+
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState('');

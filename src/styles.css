@@ -1,0 +1,52 @@
+/* src/styles.css */
+
+body {
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Dark text for the heading */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align items */
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Space above the grid */
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    background-color: #ffffff; /* White background for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0; /* Round the top corners of images */
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.btn-info {
+    background-color: #17a2b8; /* Info button color */
+    border: none;
+}
+
+.btn-info:hover {
+    background-color: #138496; /* Darker shade on hover */
+}
