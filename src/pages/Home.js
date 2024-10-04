@@ -22,7 +22,7 @@ const Home = () => {
 
     try {
       const response = await axios.get(
-        `http://www.omdbapi.com/?s=${searchQuery}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
+        `https://www.omdbapi.com/?s=${searchQuery}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
       );
 
       if (response.data.Response === 'True') {

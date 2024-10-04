@@ -11,7 +11,7 @@ const MovieDetails = () => {
     // Fetch movie details from OMDb API
     const fetchMovieDetails = async () => {
       try {
-        const response = await fetch(`http://www.omdbapi.com/?i=${id}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`);
+        const response = await fetch(`https://www.omdbapi.com/?i=${id}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`);
         const data = await response.json();
 
         if (data.Response === 'True') {
