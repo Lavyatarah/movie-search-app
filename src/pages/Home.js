@@ -9,7 +9,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const API_KEY = '1267bb9b'; 
+//   const API_KEY = '1267bb9b'; 
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ const Home = () => {
 
     try {
       const response = await axios.get(
-        `http://www.omdbapi.com/?s=${searchQuery}&apikey=${API_KEY}`
+        `http://www.omdbapi.com/?s=${searchQuery}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
       );
 
       if (response.data.Response === 'True') {
@@ -31,6 +31,7 @@ const Home = () => {
       }
     } catch (err) {
       setError('Error fetching data. Please try again later.');
+      console.log(err)
     } finally {
       setLoading(false);
     }

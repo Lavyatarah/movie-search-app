@@ -21,6 +21,7 @@ const MovieDetails = () => {
         }
       } catch (err) {
         setError('Something went wrong while fetching movie details');
+        console.log(err);
       } finally {
         setLoading(false); // Stop loading spinner
       }
