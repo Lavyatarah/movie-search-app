@@ -11,7 +11,6 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-//   const API_KEY = '1267bb9b'; 
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -38,12 +37,33 @@ const Home = () => {
       setLoading(false);
     }
   };
+//   const fetchHomeData = async () => {
+//         const response = await axios.get(
+//           `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}`
+//         );
+//     return response;
+// }
+//   useEffect(() =>{
+//   try {
+//     const response =  fetchHomeData();
+//         if (response.data.Response === 'True') {
+//           setMovies(response.data.Search);
+//         } else {
+//           setError('No movies found. Please try a different search.');
+//         }
+//       } catch (err) {
+//         setError('Error fetching data. Please try again later.');
+//         console.log(err)
+//       } finally {
+//         setLoading(false);
+//       }
+//   }, [])
 
   return (
     <div className="container mt-5">
       <h1>Movie Search App</h1>
       <form onSubmit={handleSearch}>
-        <div className="mb-3">
+        <div className="mb-3 d-flex">
           <input
             type="text"
             className="form-control"
@@ -51,8 +71,9 @@ const Home = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
+          <button type="submit" className="btn btn-primary ">Search</button>
         </div>
-        <button type="submit" className="btn btn-primary">Search</button>
+        
       </form>
 
       {loading && <p>Loading...</p>}
